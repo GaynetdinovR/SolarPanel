@@ -1,0 +1,124 @@
+$size-l: 1280px
+$size-l2: 1150px
+$size-m: 1024px
+$size-m2: 920px
+$tablet: 768px
+$phone: 425px
+
+@media (max-width: $size-m)
+	.container
+		max-width: 610px
+		margin: 0 auto
+
+	.green-tariff__types
+		margin-bottom: 60px
+
+	.our-clients__controls
+		bottom: 145px
+
+@media (max-width: $size-l2)
+	.footer
+		&__top
+			justify-content: center
+			align-items: center
+			padding: 0 200px
+		&__contacts
+			width: 510px
+		&__form
+			margin-bottom: 30px
+
+@media (max-width: $tablet)
+	.footer
+		&__top
+			padding: 0
+		&__bottom-link
+			display: none
+		&__social
+			display: none
+		&__bottom
+			justify-content: center
+
+@media (max-width: $size-m2)
+	.header__social
+		margin-top: 140px
+		padding-bottom: 42px
+
+
+@media (max-width: $phone)
+	.services__img
+		@include contentImage($w: 100%)
+
+	.green-tariff__description-img
+		@include contentImage($w: 100%)
+
+	.our-clients__img
+		@include contentImage($w: 100%)
+
+	.five-steps__img
+		@include contentImage($w: 100%)
+
+	.arrow-controls
+		display: none
+
+	.header
+		&__info
+			padding-top: 100px
+		&__social
+			margin-top: 20px
+		&__title--size-l
+			font-weight: 700
+			font-size: 42px
+			line-height: 60px
+
+		&__title--size-m
+			font-size: 24px
+			line-height: 32px
+
+		&__title--size-s
+			font-size: 18px
+			line-height: 24px
+
+	.green-tariff
+		&__info 
+			width: 100%
+			justify-items: center
+			grid-row-gap: 10px
+			grid-template-rows: 200px 120px repeat(4, 70px)
+			grid-template-columns:  repeat( auto-fit, minmax(200px, 1fr) )
+
+		&__benefit-text
+			width: 350px
+
+		&__info-text
+			width: 250px
+
+		&__benefit
+			text-align: center
+
+		&__item
+			margin-right: 20px
+
+		&__list
+			margin-bottom: 65px
+
+	.container
+		padding: 0 15px
+
+	.our-clients
+		&__info-title
+			width: 100%
+
+		&__info-list
+			width: 100%
+			margin-left: 0
+
+	.footer
+		&__form
+			width: 100%
+
+		&__input
+			width: 90%
+
+	.info-block__title
+		font-size: 32px
+		line-height: 52px

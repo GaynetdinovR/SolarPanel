@@ -1,0 +1,82 @@
+html,
+body
+	height: 100%
+
+body
+	font-size: 14px
+	font-family: 'Noto Sans', sans-serif
+	line-height: 19px
+	color: $black
+
+.wrapper
+	display: flex
+	flex-direction: column
+	min-height: 100%
+
+.main
+	flex: 1 0 auto
+
+.footer
+	flex: 0 0 auto
+
+.container-fluid
+	margin: 0 auto
+	max-width: 1980px
+
+.container
+	margin: 0 auto
+	max-width: 1220px
+	padding: 0 30px
+
+
+.button-arrow
+	color: $white
+	font-size: 18px
+	line-height: 24px
+	cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: center
+	background-color: transparent
+	border: none
+	&:hover
+		color: $hover
+		.button-arrow__img
+			filter: invert(50%) sepia(120%) saturate(120%) hue-rotate(30deg) contrast(150%)
+
+	&__text
+		margin-left: 5px
+		font-size: 18px
+		line-height: 24px
+
+.logo
+	width: 180px
+
+
+.social
+	width: 166px
+
+	&__list
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-rows: 1fr
+		grid-gap: 20px
+
+	&__item
+		display: flex
+		justify-content: center
+		align-items: center
+		&:hover
+			filter: invert(50%) sepia(120%) saturate(120%) hue-rotate(30deg) contrast(150%)
+
+
+.arrow-controls
+	&__control
+		cursor: pointer
+		width: 40px
+		padding: 20px 0
+		border: none
+		background-color: transparent
+		margin-right: 20px
+		&:hover
+			filter: invert(50%) sepia(120%) saturate(120%) hue-rotate(30deg) contrast(150%)

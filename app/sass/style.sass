@@ -1,0 +1,321 @@
+@import 'fonts'
+@import 'vars'
+@import 'reset'
+@import 'libs'
+@import 'global'
+@import 'animation'
+
+.header
+	background: url(../images/header-bg.jpg) top/cover no-repeat
+	color: $white
+	max-height: 920px
+
+	&__inner
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+
+	&__logo
+		padding-top: 76px
+
+	&__info
+		text-align: center
+		padding-top: 160px
+
+	&__title--size-l
+		font-weight: 700
+		font-size: 64px
+		line-height: 87px
+
+	&__title--size-m
+		@extend %h2-title
+
+	&__title--size-s
+		font-size: 18px
+		line-height: 24px
+
+	&__btn
+		margin-top: 50px
+
+	&__social
+		margin-top: 240px
+		padding-bottom: 42px
+
+
+.services
+	margin-top: 150px
+	&__content
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&__list
+		max-width: 610px
+
+	&__img
+		height: 670px
+		@include contentImage($w: 600px)
+
+	&__title
+		@extend %h3-title
+		color: $grey
+		text-transform: uppercase
+		margin-bottom: 60px
+
+	&__item
+		color: $black
+		margin-bottom: 50px
+
+	&__item-title
+		@extend %h4-title
+		margin-bottom: 15px
+
+.green-tariff
+	margin-top: 150px 
+	&__content
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+
+
+	&__title 
+		@extend %h3-title
+		text-transform: uppercase
+		color: $grey
+		margin-bottom: 60px
+	
+	&__list
+		display: flex
+		margin-bottom: 125px
+	
+	&__item
+		margin-right: 40px
+	
+	&__link
+		color: $black
+		border: none
+		background-color: transparent
+		font-size: 18px
+		line-height: 24px
+		padding: 0
+		position: relative
+		transition: all 0.2s
+		cursor: pointer
+		&:hover
+			color: $grey
+			&::after
+				background-color: $grey
+
+	&__link--active
+		color: $hover
+		&::after
+			content: ''
+			transition: all 0.2s
+			height: 1px
+			background-color: $hover
+			position: absolute
+			bottom: 0
+			right: 0
+			left: 0
+	&__info 
+		width: 510px
+		display: grid
+		grid-row-gap: 20px
+		grid-column-gap: 40px
+		grid-template-rows: 300px 110px 90px
+		grid-template-columns:  repeat( auto-fit, minmax(235px, 1fr) )
+		position: relative
+		margin-right: 30px
+
+	&__info-img
+		@include contentImage($w: 235px)
+
+	&__info-controls 
+		position: absolute
+		top: 170px
+		left: 295px
+
+	&__benefit-title 
+		@extend %h4-title
+		margin-bottom: 5px
+
+	&__description
+		width: 600px
+
+	&__description-text 
+		@extend %h4-title
+		margin-bottom: 17px
+
+	&__description-img
+		@include contentImage($w: 600px)
+	
+.info-block
+	margin-top: 150px
+	width: 100%
+	&__inner
+		background: url(../images/info-block-bg.jpg) center/cover no-repeat
+		min-height: 500px
+		display: flex
+		justify-content: center
+		align-items: center
+	&__title
+		@extend %h2-title
+		text-align: center
+		color: $white
+
+.our-clients
+
+	margin-top: 150px
+	padding-bottom: 91px
+	&__inner
+		position: relative
+	
+	&__title
+		@extend %h3-title
+		margin-bottom: 60px
+		color: $grey
+		text-transform: uppercase
+	
+	&__info
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+	&__info-title
+		@extend %h4-title
+		width: 480px
+		margin-bottom: 30px
+	
+	&__info-list
+		margin-left: 50px
+		margin-bottom: 65px
+	
+	&__info-item
+		margin-bottom: 15px
+		
+	&__img
+		@include contentImage($w: 510px)
+	
+	&__btn
+		filter: invert(80%)
+
+	&__controls
+		bottom: -62px
+		left: 296px
+		position: absolute
+
+.five-steps
+	margin-top: 91px
+	padding-bottom: 210px
+
+	&__inner
+		position: relative
+
+	&__content
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+	&__title
+		@extend %h3-title
+		color: $grey
+		width: 324px
+		text-transform: uppercase
+		margin-bottom: 60px
+		
+	&__list
+		width: 510px
+	
+	&__item
+		margin-bottom: 30px
+
+	&__item-num
+		color: $grey
+		margin-bottom: 11px
+		
+	&__item-title
+		@extend %h4-title
+		margin-bottom: 2px
+
+	&__img
+		@include contentImage($w: 600px)
+
+.footer
+	background: url(../images/footer-bg.jpg) no-repeat center/cover
+	color: $white
+	padding-top: 70px
+
+	&__top
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		flex-wrap: wrap
+
+	&__form
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: flex-start
+
+	&__input
+		border: none
+		color: $white
+		border-bottom: 1px solid rgba($white, 0.5)
+		border-top: 0px solid transparent
+		border-right: 0px solid transparent
+		border-left: 0px solid transparent
+		background-color: transparent
+		border: 1px solid linear-gradient(0deg, $grey 5%, rgba($grey, 1) 5%, rgba($grey, 1) 100%)
+		width: 510px
+		padding: 11px 0
+		transition: all 1s
+		&::placeholder
+			color: $white
+		&:hover
+			padding-right: -22px
+			padding-left: 11px 
+		&:focus
+			padding: 11px
+			border-color: $hover
+			color: $hover
+			&::placeholder
+				color: $hover
+
+	&__input:nth-child(3)
+		margin-top: 49px
+		margin-bottom: 60px
+
+	&__bottom
+		grid-column: span 2
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 156px
+
+	&__title
+		@extend %h3-title
+		margin-bottom: 60px
+		text-transform: uppercase
+	&__text
+		font-size: 18px
+		line-height: 24px
+		margin-bottom: 30px
+	&__phone
+		font-size: 18px
+		line-height: 24px
+		color: $white
+		transition: all 0.2s
+		&:hover
+			color: $grey
+
+	&__phones
+		margin-bottom: 30px
+
+	&__bottom-link
+		transition: all 0.2s 
+		color: $white
+		&:hover
+			color: $grey
+
+@import 'media'
